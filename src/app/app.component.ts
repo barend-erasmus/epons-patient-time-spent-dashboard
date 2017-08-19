@@ -16,7 +16,8 @@ export class AppComponent implements OnInit {
 
   public patientId: string = null;
 
-  public data: number[] = null;
+  public dataMinutes: number[] = null;
+  public dataHours: number[] = null;
 
   constructor(private http: Http, private el: ElementRef) {
     this.patientService = new PatientService(http);
@@ -28,7 +29,8 @@ export class AppComponent implements OnInit {
     this.patientId = this.el.nativeElement.getAttribute('patientId');
 
     this.patientService.timeSpent(this.patientId).subscribe((result) => {
-      this.data = result;
+      this.dataMinutes = result;
+      this.dataHours = this.dataMinutes.map((x) => (Math.floor(x / 60)));
     });
   }
 }

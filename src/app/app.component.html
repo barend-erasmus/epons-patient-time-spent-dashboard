@@ -1,9 +1,9 @@
-<div *ngIf="data != null">
-  <span class="label label-success">{{data[0]}} minutes in the last 72 Hours</span>
+<div *ngIf="dataMinutes != null">
+  <span class="label label-success">{{dataMinutes[0]}} minutes or {{dataHours[0]}} hours in the last 72 Hours</span>
   <br />
   <br />
-  <span class="label label-success">{{data[1]}} minutes in the last 48 Hours</span>
+  <span class="label label-success">{{dataMinutes[1]}} minutes or {{dataHours[1]}} hours in the last 48 Hours</span>
   <br />
   <br />
-  <span class="label label-success">{{data[2]}} minutes in the last 24 Hours</span>
+  <span class="label label-success">{{dataMinutes[2]}} minutes or {{dataHours[2]}} hours in the last 24 Hours</span>
 </div>
