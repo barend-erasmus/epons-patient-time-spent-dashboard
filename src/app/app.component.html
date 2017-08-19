@@ -1,9 +1,8 @@
+<label>Nursing time in the last</label>
 <div *ngIf="dataMinutes != null">
-  <span class="label label-success">{{dataMinutes[0]}} minutes or {{dataHours[0]}} hours in the last 72 Hours</span>
+  <span> 72 hrs: {{dataMinutes[0]}} min = {{dataHours[0]}} hrs</span>
   <br />
+  <span> 48 hrs: {{dataMinutes[1]}} min = {{dataHours[1]}} hrs</span>
   <br />
-  <span class="label label-success">{{dataMinutes[1]}} minutes or {{dataHours[1]}} hours in the last 48 Hours</span>
-  <br />
-  <br />
-  <span class="label label-success">{{dataMinutes[2]}} minutes or {{dataHours[2]}} hours in the last 24 Hours</span>
+  <span> 24 hrs: {{dataMinutes[2]}} min = {{dataHours[2]}} hrs</span>
 </div>

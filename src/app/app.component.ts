@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
     this.patientService.timeSpent(this.patientId).subscribe((result) => {
       this.dataMinutes = result;
-      this.dataHours = this.dataMinutes.map((x) => (Math.floor(x / 60)));
+      this.dataHours = this.dataMinutes.map((x) => (Math.floor(x / 60 * 100) / 100));
     });
   }
 }
